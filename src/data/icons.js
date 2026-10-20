@@ -27,7 +27,6 @@ import canvaIcon from '../assets/icons/canva.svg';
 import ctaStackIcon from '../assets/icons/cta-stack.svg';
 import emailIcon from '../assets/icons/email.svg';
 import footerGithubIcon from '../assets/icons/footer-github.svg';
-import footerLinkedinIcon from '../assets/icons/footer-linkedin.svg';
 import talkArrowIcon from '../assets/icons/talk-arrow.svg';
 import telegramIcon from '../assets/icons/telegram.svg';
 import profilePhoto from '../assets/profile.jpg';
@@ -64,7 +63,6 @@ export {
   ctaStackIcon,
   emailIcon,
   footerGithubIcon,
-  footerLinkedinIcon,
   talkArrowIcon,
   telegramIcon,
   profilePhoto,

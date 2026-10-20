@@ -1,5 +1,5 @@
 import React from 'react';
-import { footerGithubIcon, footerLinkedinIcon, telegramIcon } from '../data/icons';
+import { footerGithubIcon, telegramIcon } from '../data/icons';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Footer() {
@@ -59,15 +59,6 @@ export default function Footer() {
             title="GitHub: SANGArs5"
           >
             <img src={footerGithubIcon} alt="GitHub" />
-          </a>
-          <a
-            href={personalInfo.linkedinUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="social-btn"
-            aria-label="LinkedIn Profile"
-          >
-            <img src={footerLinkedinIcon} alt="LinkedIn" />
           </a>
         </div>
       </div>

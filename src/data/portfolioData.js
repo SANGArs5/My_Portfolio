@@ -31,7 +31,7 @@ export const personalInfo = {
   name: 'Sang TEY',
   role: 'Full-Stack Developer & ITE Student',
   institution: 'Royal University of Phnom Penh (RUPP)',
-  email: 'teysang168@gmail.com',
+  email: 'teysang5@gmail.com',
   status: 'Available for opportunities',
   heroHeadingLine1: 'I build digital',
   heroHeadingLine2: 'experiences that work.',
@@ -39,7 +39,6 @@ export const personalInfo = {
   aboutLead: "I'm a final-year Information Technology Engineering student at the Royal University of Phnom Penh with a strong focus on full-stack web development.",
   aboutBody: "As a fast learner, I enjoy turning ideas into clean, intuitive products and understanding how every layer works together. I'm looking for an opportunity to contribute, learn from a great team, and grow as a Frontend, Backend, or Full-Stack Developer.",
   githubUrl: 'https://github.com/SANGArs5',
-  linkedinUrl: 'https://linkedin.com',
   telegramUsername: '@TAESANG_ARS',
   telegramUrl: 'https://t.me/TAESANG_ARS',
 };

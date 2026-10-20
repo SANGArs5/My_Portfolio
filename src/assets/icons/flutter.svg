@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Image (Flutter logo)">
+<g id="Group">
+<path id="Vector" d="M2.11406 11.0344L13.1141 0H19.8859L5.51719 14.3687L2.11406 11.0344ZM13.1141 22H19.8859L14.025 16.1391L19.8859 10.1578H13.1141L7.25313 16.0703L13.1141 22Z" fill="#3FB6D3"/>
+</g>
+<path id="Vector_2" d="M14.025 16.1391L10.5875 12.7016L7.25313 16.0703L10.5875 19.4391L14.025 16.1391Z" fill="#27AACD"/>
+<path id="Vector_3" d="M19.8859 22L14.025 16.1391L10.5875 19.4391L13.1141 22H19.8859Z" fill="#19599A"/>
+<path id="Vector_4" d="M10.5875 19.4391L15.8813 17.9953L14.025 16.1391L10.5875 19.4391Z" fill="url(#paint0_linear_11_50)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_11_50" x1="10.2034" y1="19.9994" x2="14.923" y2="17.0842" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B4E94"/>
+<stop offset="0.63" stop-color="#1A5497"/>
+<stop offset="1" stop-color="#195A9B"/>
+</linearGradient>
+</defs>
+</svg>

@@ -133,7 +133,7 @@ export const projectsList = [
     id: '03',
     category: 'Web application & Football Portal',
     title: 'CFL',
-    subtitle: 'Cambodian Football League Hub',
+    subtitle: 'Cambodian Football League',
     description:
       'A complete football league and club web portal developed at RUPP. Features real-time match fixtures matching, results, league standings, player statistics, club rosters, news, and highlight video reels powered by Firebase and AllSports API.',
     featuresList: [

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { githubIcon } from '../data/icons';
+import { githubIcon, figmaIcon } from '../data/icons';
 
 export default function ProjectModal({ project, onClose }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -51,52 +51,76 @@ export default function ProjectModal({ project, onClose }) {
                     <span className="dot dot-yellow"></span>
                     <span className="dot dot-green"></span>
                   </div>
-                  <span className="modal-screen-url">quizbehavior.app/teacher/my-quiz</span>
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="modal-screen-gh-btn"
-                    >
-                      <img src={githubIcon} alt="" width="14" height="14" />
-                      <span>View GitHub</span>
-                      <span>↗</span>
-                    </a>
-                  )}
+                  <span className="modal-screen-url">
+                    {project.urlDisplay || 'quizbehavior.app/teacher/my-quiz'}
+                  </span>
+                  <div className="modal-screen-actions">
+                    {project.figmaUrl && (
+                      <a
+                        href={project.figmaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="modal-screen-figma-btn"
+                        title="View Figma Design"
+                      >
+                        <img src={figmaIcon} alt="" width="13" height="13" />
+                        <span>Figma</span>
+                        <span>↗</span>
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="modal-screen-gh-btn"
+                        title="View GitHub Repository"
+                      >
+                        <img src={githubIcon} alt="" width="13" height="13" />
+                        <span>GitHub</span>
+                        <span>↗</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <div className="modal-screen-body">
+                <div className={`modal-screen-body ${project.deviceType === 'mobile' ? 'modal-screen-mobile-container' : ''}`}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="modal-full-screenshot"
+                    className={project.deviceType === 'mobile' ? 'modal-mobile-screenshot' : 'modal-full-screenshot'}
                   />
                 </div>
               </div>
 
-              {/* Real Dashboard Metrics from Project Screenshot */}
-              <div className="modal-stats-highlights">
-                <div className="modal-stat-pill">
-                  <span className="stat-pill-label">Total Quizzes</span>
-                  <span className="stat-pill-value">5 Quizzes</span>
+              {/* Dynamic Dashboard Metrics from Project Screenshot */}
+              {project.metrics && project.metrics.length > 0 && (
+                <div className="modal-stats-highlights">
+                  {project.metrics.map((metric, idx) => (
+                    <div key={idx} className="modal-stat-pill">
+                      <span className="stat-pill-label">{metric.label}</span>
+                      <span className="stat-pill-value">{metric.value}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="modal-stat-pill">
-                  <span className="stat-pill-label">Active Monitoring</span>
-                  <span className="stat-pill-value">3 Active</span>
-                </div>
-                <div className="modal-stat-pill">
-                  <span className="stat-pill-label">Submissions Logged</span>
-                  <span className="stat-pill-value">6 Submissions</span>
-                </div>
-                <div className="modal-stat-pill">
-                  <span className="stat-pill-label">Average Score</span>
-                  <span className="stat-pill-value">75% Avg</span>
-                </div>
-              </div>
+              )}
             </div>
           )}
 
           <p className="modal-desc">{project.description}</p>
+
+          {project.featuresList && (
+            <div className="modal-features-section">
+              <h4 className="modal-features-heading">Included Features:</h4>
+              <div className="modal-features-grid">
+                {project.featuresList.map((feat) => (
+                  <div key={feat.name} className="modal-feature-card">
+                    <span className="modal-feature-name">{feat.name}</span>
+                    <span className="modal-feature-desc">{feat.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="tech-pills-row">
             {project.tags.map((tag) => (
@@ -104,18 +128,32 @@ export default function ProjectModal({ project, onClose }) {
             ))}
           </div>
 
-          {!project.image && project.githubUrl && (
-            <div style={{ marginBottom: '20px' }}>
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-github-link"
-              >
-                <img src={githubIcon} alt="" width="16" height="16" />
-                <span>View Repository on GitHub</span>
-                <span className="github-arrow">↗</span>
-              </a>
+          {!project.image && (project.githubUrl || project.figmaUrl) && (
+            <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-github-link"
+                >
+                  <img src={githubIcon} alt="" width="16" height="16" />
+                  <span>View Repository on GitHub</span>
+                  <span className="github-arrow">↗</span>
+                </a>
+              )}
+              {project.figmaUrl && (
+                <a
+                  href={project.figmaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-github-link"
+                >
+                  <img src={figmaIcon} alt="" width="16" height="16" />
+                  <span>View Design on Figma</span>
+                  <span className="github-arrow">↗</span>
+                </a>
+              )}
             </div>
           )}
 

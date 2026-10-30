@@ -1142,6 +1142,10 @@
   background-color: #f0d9d0;
 }
 
+.project-visual.emerald {
+  background-color: #d1e7dd;
+}
+
 .project-visual-index {
   position: absolute;
   top: 16px;
@@ -1411,6 +1415,144 @@
   letter-spacing: 0.2px;
 }
 
+/* PointSale Dual Mobile POS Mockup */
+.browser-mockup.pointsale-mockup {
+  background-color: #161a22;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 24px 35px rgba(16, 18, 15, 0.18);
+  border: 0.8px solid rgba(16, 18, 15, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.pointsale-mockup-header {
+  height: 32px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #101318;
+  border-bottom: 0.8px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-dot.accent-cyan {
+  background-color: #00bcd4;
+}
+
+.pointsale-url-pill {
+  background-color: #1f2530;
+  color: #c0c8d6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pointsale-live-indicator {
+  color: #00bcd4;
+  background-color: rgba(0, 188, 212, 0.14);
+}
+
+.cyan-pulse {
+  background-color: #00bcd4;
+  box-shadow: 0 0 6px #00bcd4;
+}
+
+.pointsale-viewport {
+  position: relative;
+  height: 250px;
+  background-color: #272a2e;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointsale-dashboard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.project-card:hover .pointsale-dashboard-img {
+  transform: scale(1.05) translateY(-2%);
+}
+
+.badge-tag-teal {
+  background-color: #00a9c7 !important;
+}
+
+.cyan-glow {
+  background-color: #00bcd4 !important;
+  box-shadow: 0 0 6px #00bcd4 !important;
+}
+
+/* CFL Football Web Portal Poster Mockup */
+.browser-mockup.cfl-dashboard-mockup {
+  background-color: #0b1f14;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 24px 35px rgba(11, 31, 20, 0.22);
+  border: 0.8px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.cfl-mockup-header {
+  height: 32px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #08170e;
+  border-bottom: 0.8px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-dot.accent-emerald {
+  background-color: #10b981;
+}
+
+.cfl-url-pill {
+  background-color: #11261a;
+  color: #a7f3d0;
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.url-ball {
+  font-size: 10px;
+}
+
+.cfl-live-indicator {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.15);
+}
+
+.emerald-pulse {
+  background-color: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.cfl-viewport {
+  position: relative;
+  height: 250px;
+  background-color: #091a10;
+  overflow: hidden;
+}
+
+.cfl-dashboard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.project-card:hover .cfl-dashboard-img {
+  transform: scale(1.04) translateY(-3%);
+}
+
 /* Project Info Column */
 .project-info {
   display: flex;
@@ -1530,6 +1672,39 @@
 }
 
 .btn-github-pill:hover .github-arrow {
+  transform: translate(2px, -2px);
+}
+
+.btn-figma-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #1e1e1e;
+  color: #f4f2eb;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-family: var(--font-primary);
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid #2d2d2d;
+}
+
+.btn-figma-pill:hover {
+  background-color: #0d99ff;
+  border-color: #0d99ff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 153, 255, 0.35);
+}
+
+.btn-figma-pill img {
+  width: 13px;
+  height: 13px;
+}
+
+.btn-figma-pill:hover .github-arrow {
   transform: translate(2px, -2px);
 }
 
@@ -2292,6 +2467,32 @@
   border-radius: 10px;
 }
 
+.modal-screen-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.modal-screen-figma-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #1e1e1e;
+  color: #f4f2eb;
+  padding: 3px 9px;
+  border-radius: 12px;
+  font-size: 9.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 0.6px solid rgba(255, 255, 255, 0.12);
+}
+
+.modal-screen-figma-btn:hover {
+  background-color: #0d99ff;
+  color: #ffffff;
+}
+
 .modal-screen-gh-btn {
   display: inline-flex;
   align-items: center;
@@ -2311,7 +2512,8 @@
   color: #ffffff;
 }
 
-.modal-screen-gh-btn img {
+.modal-screen-gh-btn img,
+.modal-screen-figma-btn img {
   filter: brightness(0) invert(1);
 }
 
@@ -2320,6 +2522,15 @@
   max-height: 250px;
   overflow: hidden;
   background-color: #f9f9f7;
+}
+
+.modal-screen-mobile-container {
+  max-height: 380px;
+  background-color: #1e2227;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 12px;
 }
 
 .modal-full-screenshot {
@@ -2331,7 +2542,18 @@
   transition: transform 0.4s ease;
 }
 
-.modal-screen-body:hover .modal-full-screenshot {
+.modal-mobile-screenshot {
+  max-height: 340px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease;
+}
+
+.modal-screen-body:hover .modal-full-screenshot,
+.modal-screen-mobile-container:hover .modal-mobile-screenshot {
   transform: scale(1.02);
 }
 
@@ -2366,6 +2588,68 @@
   font-size: 13px;
   font-weight: 800;
   color: var(--text-dark);
+}
+
+/* Modal Features Section */
+.modal-features-section {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #f6fbf8;
+  border: 0.8px solid #d1e7dd;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.modal-features-heading {
+  font-family: var(--font-primary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #0f5132;
+  margin: 0 0 8px 0;
+}
+
+.modal-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .modal-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.modal-feature-card {
+  background-color: #ffffff;
+  border: 0.8px solid #badbcc;
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(15, 81, 50, 0.08);
+}
+
+.modal-feature-name {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 800;
+  color: #0f5132;
+  margin-bottom: 2px;
+}
+
+.modal-feature-desc {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  color: #556b5f;
+  line-height: 1.3;
 }
 
 .modal-form-heading {

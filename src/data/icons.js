@@ -33,6 +33,8 @@ import profilePhoto from '../assets/profile.jpg';
 import telegramQr from '../assets/telegram-qr.png';
 import quizbehaviorSidebar from '../assets/quizbehavior-sidebar.png';
 import quizbehaviorDashboard from '../assets/quizbehavior-dashboard.png';
+import pointsalePreview from '../assets/pointsale-preview.png';
+import cflDashboard from '../assets/cfl-dashboard.png';
 
 export {
   arrowRightIcon,
@@ -69,4 +71,6 @@ export {
   telegramQr,
   quizbehaviorSidebar,
   quizbehaviorDashboard,
+  pointsalePreview,
+  cflDashboard,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { externalLinkIcon, githubIcon } from '../data/icons';
+import { externalLinkIcon, githubIcon, figmaIcon } from '../data/icons';
 import { projectsList } from '../data/portfolioData';
 
 export default function Projects({ onOpenModal }) {
@@ -62,6 +62,67 @@ export default function Projects({ onOpenModal }) {
                         </div>
                       </div>
                     </div>
+                  ) : project.id === '02' && project.image ? (
+                    /* Clean & Creative PointSale Dual Mobile POS Mockup */
+                    <div className="browser-mockup pointsale-mockup">
+                      <div className="mockup-header pointsale-mockup-header">
+                        <div className="mockup-header-left">
+                          <span className="mockup-dot accent-cyan"></span>
+                          <span className="mockup-dot subtle"></span>
+                          <span className="mockup-dot subtle"></span>
+                        </div>
+                        <div className="mockup-url-pill pointsale-url-pill">
+                          <span className="mobile-phone-icon">📱</span> Flutter POS App
+                        </div>
+                        <div className="mockup-live-indicator pointsale-live-indicator">
+                          <span className="live-dot-pulse cyan-pulse"></span>
+                          <span>Live Demo</span>
+                        </div>
+                      </div>
+
+                      <div className="mockup-dashboard-viewport pointsale-viewport">
+                        <img
+                          src={project.image}
+                          alt="PointSale Mobile POS Dashboard and Drawer"
+                          className="pointsale-dashboard-img"
+                        />
+                        {/* Floating Glassmorphic Badges */}
+                        <div className="floating-metric-badge badge-top-right">
+                          <span className="badge-tag badge-tag-teal">TODAY'S SALES</span>
+                          <span className="badge-text">$2,847.50 • 42 Orders</span>
+                        </div>
+                        <div className="floating-metric-badge badge-bottom-left">
+                          <span className="badge-pulse-indicator cyan-glow"></span>
+                          <span className="badge-text">Live Stock & Analytics</span>
+                        </div>
+                      </div>
+                    </div>
+                  ) : project.id === '03' && project.image ? (
+                    /* Clean & Creative CFL Football Portal Poster Browser Mockup */
+                    <div className="browser-mockup cfl-dashboard-mockup">
+                      <div className="mockup-header cfl-mockup-header">
+                        <div className="mockup-header-left">
+                          <span className="mockup-dot accent-emerald"></span>
+                          <span className="mockup-dot subtle"></span>
+                          <span className="mockup-dot subtle"></span>
+                        </div>
+                        <div className="mockup-url-pill cfl-url-pill">
+                          <span className="url-ball">⚽</span> camfootball.app/cfl-league
+                        </div>
+                        <div className="mockup-live-indicator cfl-live-indicator">
+                          <span className="live-dot-pulse emerald-pulse"></span>
+                          <span>Season 2026</span>
+                        </div>
+                      </div>
+
+                      <div className="mockup-dashboard-viewport cfl-viewport">
+                        <img
+                          src={project.image}
+                          alt="CFL Cambodia Football League Web Portal"
+                          className="cfl-dashboard-img"
+                        />
+                      </div>
+                    </div>
                   ) : (
                     /* Default Abstract Mockup */
                     <div className="browser-mockup">
@@ -114,6 +175,20 @@ export default function Projects({ onOpenModal }) {
                     >
                       <img src={githubIcon} alt="" width="16" height="16" />
                       <span>View GitHub</span>
+                      <span className="github-arrow">↗</span>
+                    </a>
+                  )}
+
+                  {project.figmaUrl && (
+                    <a
+                      href={project.figmaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-figma-pill"
+                      title="View Figma Design"
+                    >
+                      <img src={figmaIcon} alt="" width="15" height="15" />
+                      <span>View Figma</span>
                       <span className="github-arrow">↗</span>
                     </a>
                   )}
